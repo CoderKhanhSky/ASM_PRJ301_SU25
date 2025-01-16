@@ -1,0 +1,10 @@
+Trong truong hop muon xoa mot record ma bi rang buoc chung ta nen xoa mem (Status : 1/0)
+Example : 
+-- Thêm cột Status vào bảng Service
+ALTER TABLE [dbo].[Service]
+ADD [Status] NVARCHAR(10) NOT NULL DEFAULT 'Active';
+
+-- Cập nhật giá trị cho các bản ghi hiện tại nếu cần
+UPDATE [dbo].[Service]
+SET [Status] = 'Active';
+// khi delete ta set Status thanh Deactive bang cau lenh sql. Khi ta can showList thi them dieu kien where status = active .
