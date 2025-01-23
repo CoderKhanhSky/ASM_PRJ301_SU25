@@ -61,7 +61,7 @@ public class ListServiceMechanic extends HttpServlet {
             throws ServletException, IOException {
         ServiceMechanicDAO dao = new ServiceMechanicDAO();
         List<ServiceMechanic> list = dao.getList();
-        request.setAttribute("data", list);
+        request.setAttribute("dataSM", list);
         request.getRequestDispatcher("ListSM.jsp").forward(request, response);
     }
 

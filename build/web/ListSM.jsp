@@ -13,6 +13,7 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <a href="HomeMechanic.jsp">Home</a>
         <table border="1">
             <thead>
                 <tr>
@@ -22,10 +23,11 @@
                     <th>hours</th>
                     <th>comment</th>
                     <th>rate</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-                <c:forEach items="${data}" var="l">
+                <c:forEach items="${dataSM}" var="l">
                 <tr>
                     <td>${l.serviceTicketID}</td>
                     <td>${l.serviceID}</td>
@@ -33,6 +35,9 @@
                     <td>${l.hours}</td>
                     <td>${l.comment}</td>
                     <td>${l.rate}</td>
+                    <td>
+                        <a href="UpdateServiceMechanic?serviceTicketID=${l.serviceTicketID}&serviceID=${l.serviceID}">Update</a>
+                    </td>
                 </tr>
                 </c:forEach>
             </tbody>

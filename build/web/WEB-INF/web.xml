@@ -20,6 +20,10 @@
         <servlet-name>ListServiceMechanic</servlet-name>
         <servlet-class>controller.ListServiceMechanic</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UpdateServiceMechanic</servlet-name>
+        <servlet-class>controller.UpdateServiceMechanic</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ListService</servlet-name>
         <url-pattern>/ListService</url-pattern>
@@ -40,12 +44,16 @@
         <servlet-name>ListServiceMechanic</servlet-name>
         <url-pattern>/ListServiceMechanic</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateServiceMechanic</servlet-name>
+        <url-pattern>/UpdateServiceMechanic</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>ListService</welcome-file>
+        <welcome-file>HomeMechanic.jsp</welcome-file>
     </welcome-file-list>
 </web-app>

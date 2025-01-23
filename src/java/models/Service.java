@@ -14,12 +14,12 @@ import java.math.BigDecimal;
 public class Service {
     private int serviceID;
     private String serviceName;
-    private BigDecimal hourlyRate;
+    private String hourlyRate;
 
     public Service() {
     }
 
-    public Service(int serviceID, String serviceName, BigDecimal hourlyRate) {
+    public Service(int serviceID, String serviceName, String hourlyRate) {
         this.serviceID = serviceID;
         this.serviceName = serviceName;
         this.hourlyRate = hourlyRate;
@@ -41,11 +41,11 @@ public class Service {
         this.serviceName = serviceName;
     }
 
-    public BigDecimal getHourlyRate() {
+    public String getHourlyRate() {
         return hourlyRate;
     }
 
-    public void setHourlyRate(BigDecimal hourlyRate) {
+    public void setHourlyRate(String hourlyRate) {
         this.hourlyRate = hourlyRate;
     }
    

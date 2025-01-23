@@ -34,7 +34,7 @@ public class ServiceDAO {
             while (rs.next()) {
                 list.add(new Service(rs.getInt("serviceID"),
                         rs.getString("serviceName"),
-                        new BigDecimal(rs.getBigDecimal("hourlyRate").stripTrailingZeros().toPlainString())));
+                        rs.getString("hourlyRate")));
             }
         } catch (Exception e) {
         }
@@ -61,7 +61,7 @@ public class ServiceDAO {
         try {
             PreparedStatement st = con.getConnection().prepareStatement(sql);
             st.setString(1, s.getServiceName());
-            st.setBigDecimal(2, s.getHourlyRate());
+            st.setString(2, s.getHourlyRate());
             st.setInt(3, s.getServiceID());
             st.executeUpdate();
         } catch (Exception e) {
@@ -78,7 +78,7 @@ public class ServiceDAO {
             while (rs.next()) {
                 return new Service(rs.getInt("serviceID"),
                         rs.getString("serviceName"),
-                        new BigDecimal(rs.getBigDecimal("hourlyRate").stripTrailingZeros().toPlainString()));
+                        rs.getString("hourlyRate"));
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -93,7 +93,7 @@ public class ServiceDAO {
             PreparedStatement st = con.getConnection().prepareStatement(sql);
             st.setInt(1, s.getServiceID());
             st.setString(2, s.getServiceName());
-            st.setBigDecimal(3, s.getHourlyRate());
+            st.setString(3, s.getHourlyRate());
             st.executeUpdate();
         } catch (Exception e) {
         }

@@ -20,6 +20,7 @@
         </script>
     </head>
     <body>
+        <a href="HomeMechanic.jsp">Home</a>
         <table border="1">
             <thead>
                 <tr>

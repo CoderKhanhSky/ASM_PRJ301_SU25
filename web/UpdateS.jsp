@@ -14,7 +14,7 @@
     </head>
     <body>
         <c:set value="${service}" var="l"/>
-        <form action="UpdateService" method="post">
+        <form action="UpdateService" method="post" accept-charset="UTF-8">
         <table>
             <tbody>
                 <tr>

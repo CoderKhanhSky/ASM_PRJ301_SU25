@@ -5,8 +5,6 @@
  */
 package models;
 
-import java.math.BigDecimal;
-import java.sql.Date;
 
 /**
  *
@@ -15,15 +13,15 @@ import java.sql.Date;
 public class ServiceMechanic {
     private int serviceTicketID;
     private int serviceID;
-    private BigDecimal mechanicID;
+    private String mechanicID;
     private int hours;
     private String comment;
-    private BigDecimal rate;
+    private String rate;
 
     public ServiceMechanic() {
     }
 
-    public ServiceMechanic(int serviceTicketID, int serviceID, BigDecimal mechanicID, int hours, String comment, BigDecimal rate) {
+    public ServiceMechanic(int serviceTicketID, int serviceID, String mechanicID, int hours, String comment, String rate) {
         this.serviceTicketID = serviceTicketID;
         this.serviceID = serviceID;
         this.mechanicID = mechanicID;
@@ -48,11 +46,11 @@ public class ServiceMechanic {
         this.serviceID = serviceID;
     }
 
-    public BigDecimal getMechanicID() {
+    public String getMechanicID() {
         return mechanicID;
     }
 
-    public void setMechanicID(BigDecimal mechanicID) {
+    public void setMechanicID(String mechanicID) {
         this.mechanicID = mechanicID;
     }
 
@@ -72,11 +70,13 @@ public class ServiceMechanic {
         this.comment = comment;
     }
 
-    public BigDecimal getRate() {
+    public String getRate() {
         return rate;
     }
 
-    public void setRate(BigDecimal rate) {
+    public void setRate(String rate) {
         this.rate = rate;
     }
 }
+    
+    

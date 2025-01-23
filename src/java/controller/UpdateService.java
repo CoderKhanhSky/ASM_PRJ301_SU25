@@ -82,12 +82,14 @@ public class UpdateService extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html;charset=UTF-8");
         String serviceID_raw = request.getParameter("serviceID");
         try {
         int serviceID = Integer.parseInt(serviceID_raw);
         String serviceName = request.getParameter("serviceName");
-        String hourlyRate_raw = request.getParameter("hourlyRate");
-        BigDecimal hourlyRate = new BigDecimal(hourlyRate_raw).stripTrailingZeros();
+        String hourlyRate = request.getParameter("hourlyRate");
         ServiceDAO dao = new ServiceDAO();
         //update
         dao.updateService(new Service(serviceID, serviceName, hourlyRate));
